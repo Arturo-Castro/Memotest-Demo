@@ -47,7 +47,10 @@ function analyzeRound(e){
                 $cardChosenFront = [];
                 unblockPlayerInput();
                 if(counter === 6){
-                    document.querySelector('h1').textContent = 'You win! press any button to play again'
+                    document.querySelector('h1').textContent = 'You win!, restarting...';
+                    setTimeout(function(){
+                        window.location.reload();
+                    }, 2000);
                 } 
             }, 1100);
         }else{
@@ -70,10 +73,4 @@ for(let i= $cardsUrl.length-1; i >= 0 ; i--){
     const randomPick = Math.floor(Math.random() * (i+1));
     document.querySelector(`#img-${i+1}`).src = $cardsUrl[randomPick];
     $cardsUrl.splice(randomPick, 1);
-}
-
-document.querySelector('body').onkeydown = function(e){
-    if(counter === 6){
-        window.location.reload();
-    }
 }
