@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server",
+    "cypress-dev": "cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/Arturo-Castro/Memotest-Project#readme",
   "dependencies": {
     "bootstrap": "^5.1.1"
+  },
+  "devDependencies": {
+    "cypress": "^8.6.0"
   }
 }
